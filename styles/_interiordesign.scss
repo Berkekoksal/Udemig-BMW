@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./modules";
+@import "./mediaquaries";
+
+.interior {
+  @extend %design;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black),
+    url(../images/bmw-banner.jpeg);
+  //! ./ mevcut dizini ifade ederken ../ bir üst dizini ifade eder.
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* margin: 50px 0; */
+  p {
+    font-size: 15px !important;
+    transform: translateY(25px);
+  }
+  h1 {
+    transform: translateY(55px);
+  }
+  button {
+    transform: translateY(-55px);
+  }
+}

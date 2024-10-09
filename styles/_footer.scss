@@ -1,0 +1,53 @@
+@import "./variables";
+@import "./modules";
+@import "./mediaquaries";
+
+footer{
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #000;
+    padding: 50px;
+    @include mobile{
+        flex-direction: column;
+        gap: 40px;
+    }
+    img{
+        width: 170px;
+        height: 120px;
+        mix-blend-mode: unset;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h2{
+            @extend %heading;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: $bg-color;
+            transition: all .5s;
+            &:hover{
+                color: $text-color;
+                transform: translateX(10px);
+            }
+        }
+    }
+    .copyright{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-size: 18px;
+            color:white;
+            margin-top: 25px;
+            span{
+                color: crimson;
+            }
+        }
+    }
+}

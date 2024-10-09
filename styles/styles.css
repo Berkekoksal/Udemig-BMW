@@ -1,0 +1,616 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+header img {
+  width: 80px;
+  margin-left: 15px;
+  mix-blend-mode: darken;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: #252a34;
+  transition: all 0.5s ease;
+}
+header nav a:hover {
+  color: crimson;
+}
+header .nav-links-left a {
+  padding: 0 20px;
+  border-right: 1px solid gray;
+}
+header .nav-links-left a:last-child {
+  border-right: none;
+}
+header .nav-links-right {
+  gap: 30px;
+  font-size: 15px;
+}
+@media (max-width: 800px) {
+  header .nav-links-right {
+    display: none;
+  }
+}
+header .opener {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  background-color: rgb(220, 220, 220);
+  box-shadow: 2px 2px 10px;
+  /* display: flex;  Gerek yok. Hover olduğu zaman yapıyoruz.*/
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: none;
+}
+header .opener a {
+  text-decoration: none;
+  color: #000;
+}
+header .menu-icon {
+  width: 40px;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  header .menu-icon {
+    display: block;
+  }
+}
+header .menu-icon:hover + .opener {
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+footer .footer-links h2, .banner .first-banner h1, #exterior-area h1, .interior h1 {
+  font-family: "Inter";
+  color: #252a34;
+}
+
+.banner .first-banner p, #exterior-area p, .interior p {
+  color: #37393c;
+  font-size: 17px;
+}
+
+button, .banner .first-banner button, #exterior-area button, .interior button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#exterior-area, .interior {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+#exterior-area h1, .interior h1 {
+  color: white;
+}
+#exterior-area p, .interior p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 500px;
+  color: white;
+}
+#exterior-area button, .interior button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.4s;
+  color: white;
+  padding: 15px 40px;
+}
+#exterior-area button:hover, .interior button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background: linear-gradient(rgb(215, 215, 215) 40%, #eaeaea 40%);
+}
+@media (max-width: 800px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 50px;
+  }
+}
+@media (max-width: 800px) and (max-width: 1400px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+}
+.banner .first-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  max-width: 500px;
+}
+@media (max-width: 800px) {
+  .banner .first-banner {
+    gap: 25px;
+  }
+}
+.banner .first-banner h1 {
+  font-size: 40px;
+}
+@media (max-width: 800px) {
+  .banner .first-banner h1 {
+    text-align: center;
+  }
+}
+.banner .first-banner h1 span {
+  font-family: "Times New Roman", Times, serif;
+}
+.banner .first-banner img {
+  width: 250px;
+}
+.banner .first-banner button {
+  background-color: crimson;
+  transition: all 0.5s ease;
+}
+.banner .first-banner button:hover {
+  background-color: rgb(168, 16, 46);
+}
+.banner .second-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.banner .second-banner-bmw {
+  max-width: 800px;
+}
+@media (max-width: 800px) and (max-width: 1400px) {
+  .banner .second-banner-bmw {
+    max-width: 500px;
+  }
+}
+.banner .second-banner-track {
+  max-width: 400px;
+}
+.banner .second-banner p {
+  max-width: 500px;
+  text-align: center;
+}
+
+footer .footer-links h2, #exterior-area h1, .interior h1, .banner .first-banner h1 {
+  font-family: "Inter";
+  color: #252a34;
+}
+
+#exterior-area p, .interior p, .banner .first-banner p {
+  color: #37393c;
+  font-size: 17px;
+}
+
+button, #exterior-area button, .interior button, .banner .first-banner button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#exterior-area, .interior {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+#exterior-area h1, .interior h1 {
+  color: white;
+}
+#exterior-area p, .interior p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 500px;
+  color: white;
+}
+#exterior-area button, .interior button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.4s;
+  color: white;
+  padding: 15px 40px;
+}
+#exterior-area button:hover, .interior button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+}
+
+footer .footer-links h2, #exterior-area h1, .interior h1, .banner .first-banner h1 {
+  font-family: "Inter";
+  color: #252a34;
+}
+
+#exterior-area p, .interior p, .banner .first-banner p {
+  color: #37393c;
+  font-size: 17px;
+}
+
+button, #exterior-area button, .interior button, .banner .first-banner button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#exterior-area, .interior {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+#exterior-area h1, .interior h1 {
+  color: white;
+}
+#exterior-area p, .interior p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 500px;
+  color: white;
+}
+#exterior-area button, .interior button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.4s;
+  color: white;
+  padding: 15px 40px;
+}
+#exterior-area button:hover, .interior button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+}
+
+.interior {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black), url(../images/bmw-banner.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 50px 0;
+}
+.interior p {
+  font-size: 15px !important;
+  transform: translateY(25px);
+}
+.interior h1 {
+  transform: translateY(55px);
+}
+.interior button {
+  transform: translateY(-55px);
+}
+
+footer .footer-links h2, #exterior-area h1, .banner .first-banner h1, .interior h1 {
+  font-family: "Inter";
+  color: #252a34;
+}
+
+#exterior-area p, .banner .first-banner p, .interior p {
+  color: #37393c;
+  font-size: 17px;
+}
+
+button, .banner .first-banner button, .interior button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#exterior-area, .interior {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+#exterior-area h1, .interior h1 {
+  color: white;
+}
+#exterior-area p, .interior p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 500px;
+  color: white;
+}
+#exterior-area button, .interior button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.4s;
+  color: white;
+  padding: 15px 40px;
+}
+#exterior-area button:hover, .interior button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+}
+
+.cars-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+  padding: 20px;
+}
+.cars-area .cars {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 800px) {
+  .cars-area .cars {
+    flex-direction: column;
+  }
+}
+.cars-area img {
+  width: 450px;
+}
+.cars-area .cars-card:nth-child(2) {
+  margin-left: 50px;
+}
+.cars-area .bmw-m4 {
+  width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 30px;
+}
+.cars-area h3 {
+  text-align: center;
+}
+
+button {
+  background-color: #6eacda;
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+button:hover {
+  background-color: #6eacda;
+  transform: scale(1.1);
+}
+
+footer .footer-links h2, #exterior-area h1, .banner .first-banner h1, .interior h1 {
+  font-family: "Inter";
+  color: #252a34;
+}
+
+#exterior-area p, .banner .first-banner p, .interior p {
+  color: #37393c;
+  font-size: 17px;
+}
+
+.banner .first-banner button, .interior button, button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#exterior-area, .interior {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+#exterior-area h1, .interior h1 {
+  color: white;
+}
+#exterior-area p, .interior p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 500px;
+  color: white;
+}
+#exterior-area button, .interior button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.4s;
+  color: white;
+  padding: 15px 40px;
+}
+#exterior-area button:hover, .interior button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+}
+
+#exterior-area {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black), url(../images/bmw-5.avif);
+}
+#exterior-area h1 {
+  transform: translateY(55px);
+}
+#exterior-area p {
+  font-size: 15px !important;
+  transform: translateY(25px);
+}
+#exterior-area button {
+  transform: translateY(-55px);
+}
+
+footer .footer-links h2, .banner .first-banner h1, .interior h1, #exterior-area h1 {
+  font-family: "Inter";
+  color: #252a34;
+}
+
+.banner .first-banner p, .interior p, #exterior-area p {
+  color: #37393c;
+  font-size: 17px;
+}
+
+.banner .first-banner button, .interior button, button, #exterior-area button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.interior, #exterior-area {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+.interior h1, #exterior-area h1 {
+  color: white;
+}
+.interior p, #exterior-area p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 500px;
+  color: white;
+}
+.interior button, #exterior-area button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color 0.4s;
+  color: white;
+  padding: 15px 40px;
+}
+.interior button:hover, #exterior-area button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #000;
+  padding: 50px;
+}
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+footer img {
+  width: 170px;
+  height: 120px;
+  mix-blend-mode: unset;
+}
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .footer-links h2 {
+  color: white;
+}
+footer .footer-links a {
+  text-decoration: none;
+  color: #eaeaea;
+  transition: all 0.5s;
+}
+footer .footer-links a:hover {
+  color: #252a34;
+  transform: translateX(10px);
+}
+footer .copyright {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+footer .copyright p {
+  font-size: 18px;
+  color: white;
+  margin-top: 25px;
+}
+footer .copyright p span {
+  color: crimson;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: #eaeaea;
+}
+
+img {
+  /* Resmin arka planında bir beyazlık mevcuttu bunu mix-blend-mode:darken;
+  ile hallettik. Bu sayede resmin kapsayıcısının arka plan rengi neyse 
+  resimde buna göre kendini ayarlar. */
+  mix-blend-mode: darken;
+}/*# sourceMappingURL=styles.css.map */

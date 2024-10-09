@@ -1,0 +1,72 @@
+@import "./variables";
+@import "./mediaquaries";
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    img{
+        width:80px;
+        margin-left: 15px;
+        mix-blend-mode: darken;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+       
+        a{
+            text-decoration: none;
+            color: $text-color;
+            transition: all 0.5s ease;
+            &:hover{
+                color: crimson;
+            }
+        }
+    }
+    .nav-links-left{
+        a{ 
+            padding: 0 20px;
+            border-right: 1px solid gray;
+            &:last-child{
+                border-right: none;
+            }
+        }
+       
+    }
+    .nav-links-right{
+        gap: 30px;
+        font-size: 15px;
+        @include mobile{
+            display: none;
+        }
+    }
+   .opener{
+    position: absolute;
+    right: 0;
+    top: 100px;
+    background-color: rgb(220, 220, 220);
+    box-shadow: 2px 2px 10px ;
+    /* display: flex;  Gerek yok. Hover olduğu zaman yapıyoruz.*/
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    display: none;
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+   }
+   .menu-icon{
+    width: 40px;
+    display: none;
+    cursor: pointer;
+    @include mobile{
+        display: block;
+        }
+        &:hover + .opener{
+            display: flex;
+            transition: all 0.5s ease;
+    }
+   }
+}

@@ -1,0 +1,19 @@
+@import "./variables";
+@import "./modules";
+@import "./mediaquaries";
+
+#exterior-area{
+    @extend %design;
+    
+    background-image: radial-gradient(rgba(0,0,0,0.5),black),url(../images/bmw-5.avif);
+    h1{
+        transform: translateY(55px);
+    }
+    p{
+        font-size: 15px !important;
+        transform: translateY(25px);
+    }
+    button{
+        transform: translateY(-55px);
+    }
+}
